@@ -2,7 +2,7 @@ services:
   todo-app:
     build: .
     ports:
-      - "2026:3000"
+      - "2025:3000"
     environment:
       - DB_URL=mongodb://mongo:27017/todo
       - PORT=3000
