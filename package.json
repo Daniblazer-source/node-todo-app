@@ -19,8 +19,8 @@
     "Mongoose",
     "Todo"
   ],
-  "engines": { 
-    "node": "16.x" 
+  "engines": {
+    "node": "16.x"
   },
   "author": "Santiago Bernal",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "bl": "^6.0.2",
     "bluebird": "^3.7.2",
     "body-parser": "^1.20.2",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.6.1",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "mongoose": "^8.9.5",
@@ -44,6 +44,6 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.1.14"
   }
 }

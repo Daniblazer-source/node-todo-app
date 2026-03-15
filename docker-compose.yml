@@ -1,18 +1,29 @@
 services:
-  todo-app:
-    build: .
-    ports:
-      - "2025:3000"
-    environment:
-      - DB_URL=mongodb://mongo:27017/todo
-      - PORT=3000
-    depends_on:
-      - mongo
-
   mongo:
     image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
     volumes:
       - mongo-data:/data/db
 
+  app:
+    build: .
+    container_name: node-todo-app
+    ports:
+      - "3005:3000"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    environment:
+      - DB_URL=mongodb://mongo:27017/todo-app
+      - PORT=3000
+
 volumes:
   mongo-data:
+
+
+
+
